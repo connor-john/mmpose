@@ -1,6 +1,7 @@
 from .builder import build_dataloader, build_dataset
 from .datasets import (BottomUpCocoDataset, BottomUpCrowdPoseDataset,
                        BottomUpMhpDataset, FreiHandDataset, InterHand2DDataset,
+                       Face300WDataset,
                        MeshAdversarialDataset, MeshH36MDataset, MeshMixDataset,
                        MoshDataset, OneHand10KDataset, PanopticDataset,
                        TopDownAicDataset, TopDownCocoDataset,
@@ -24,6 +25,6 @@ __all__ = [
     'BottomUpCrowdPoseDataset', 'TopDownFreiHandDataset',
     'TopDownOneHand10KDataset', 'TopDownPanopticDataset',
     'TopDownPoseTrack18Dataset', 'TopDownJhmdbDataset', 'TopDownMhpDataset',
-    'build_dataloader', 'build_dataset', 'Compose', 'DistributedSampler',
+    'Face300WDataset', 'build_dataloader', 'build_dataset', 'Compose', 'DistributedSampler',
     'DATASETS', 'PIPELINES'
 ]
