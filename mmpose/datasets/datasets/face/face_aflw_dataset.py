@@ -21,7 +21,7 @@ class FaceAFLWDataset(FaceBaseDataset):
     The dataset loads raw images and apply specified transforms
     to return a dict containing the image tensors and other information.
 
-    The landmark annotations follow the 68 points mark-up.
+    The landmark annotations follow the 19 points mark-up.
 
     Args:
         ann_file (str): Path to the annotation file.
@@ -147,7 +147,7 @@ class FaceAFLWDataset(FaceBaseDataset):
         outputs = np.array(outputs)
         gts = np.array(gts)
         masks = np.array(masks)
-        box_sizes = np.array(box_sizes)
+        box_sizes = np.array(box_sizes).reshape([-1, 1])
 
         if 'NME' in metrics:
             normalize_factor = self._get_normalize_factor(box_sizes)

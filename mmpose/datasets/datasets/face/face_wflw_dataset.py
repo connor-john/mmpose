@@ -19,7 +19,8 @@ class FaceWFLWDataset(FaceBaseDataset):
     The dataset loads raw images and apply specified transforms
     to return a dict containing the image tensors and other information.
 
-    The landmark annotations follow the 68 points mark-up.
+    The landmark annotations follow the 98 points mark-up. The definition
+    can be found in `https://wywu.github.io/projects/LAB/WFLW.html`.
 
     Args:
         ann_file (str): Path to the annotation file.
