@@ -59,12 +59,18 @@ def test_top_down_simple_head():
     head = TopDownSimpleHead(
         out_channels=3, in_channels=512, extra={'final_conv_kernel': 3})
     head.init_weights()
-    assert head.final_layer.padding == (1, 1)
+    assert head.final_layer[0].padding == (1, 1)
     head = TopDownSimpleHead(
         out_channels=3, in_channels=512, extra={'final_conv_kernel': 1})
-    assert head.final_layer.padding == (0, 0)
+    assert head.final_layer[0].padding == (0, 0)
     _ = TopDownSimpleHead(
         out_channels=3, in_channels=512, extra={'final_conv_kernel': 0})
+    head = TopDownSimpleHead(
+        out_channels=3,
+        in_channels=512,
+        extra=dict(
+            final_conv_kernel=1, num_conv_layers=1, num_conv_kernels=(1, )))
+    assert len(head.final_layer) == 4
 
     head = TopDownSimpleHead(out_channels=3, in_channels=512)
     input_shape = (1, 512, 32, 32)
