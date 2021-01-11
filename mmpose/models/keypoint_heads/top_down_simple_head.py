@@ -3,8 +3,8 @@ import torch.nn as nn
 from mmcv.cnn import (build_conv_layer, build_norm_layer, build_upsample_layer,
                       constant_init, normal_init)
 
+from mmpose.models.utils.ops import resize
 from ..registry import HEADS
-from .utils.ops import resize
 
 
 @HEADS.register_module()
