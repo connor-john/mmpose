@@ -2,9 +2,11 @@
 
 ## Introduction
 
-```
+[BACKBONE]
+
+```latex
 @inproceedings{hu2018squeeze,
-  title="{Squeeze-and-excitation networks}",
+  title={Squeeze-and-excitation networks},
   author={Hu, Jie and Shen, Li and Sun, Gang},
   booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
   pages={7132--7141},
